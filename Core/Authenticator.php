@@ -44,9 +44,9 @@ class Authenticator
     {
         session_regenerate_id();
         
-        $_SESSION['user'] = [
-            'email' => $user['email'],
-        ];
+        Session::put('user', [
+            'email'=> $user['email'],
+        ]);
 
     }
 
